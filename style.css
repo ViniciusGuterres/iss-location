@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+.container-map {
+    margin: 0 auto;
+    width: 70%;
+}
+
 #mapid {
     height: 500px;
-    width: 100%;
-
 }
