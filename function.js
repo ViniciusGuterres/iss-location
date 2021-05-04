@@ -9,13 +9,24 @@ const mymap = L.map('mapid', {
 });
 
 // setting the satellite icon that goes mark the iss position on the map
-var myIcon = L.icon({   
+let myIcon = L.icon({   
     iconUrl: 'iss.png',
     iconSize: [100, 100],
     iconAnchor: [25, 16],
 });
 
 const marker = L.marker([0, 0], {icon: myIcon}).addTo(mymap);
+
+// setting an circle around the satellite icon
+
+let circle = L.circle({
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 2000000
+});
+
+let circleAround = L.circle([0, 0], {radius: 2000000}).addTo(mymap)
 
 // setting the map tiles from Open Streetmap
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -42,8 +53,10 @@ setInterval(
         mymap.setView([latitude, longitude]);
 
         // passing the coordenates of my station to my map make a maker on it
-        marker.setLatLng([latitude, longitude]);       
+        marker.setLatLng([latitude, longitude]);
 
+        circleAround.setLatLng([latitude, longitude]);
+        
         sectionLat.textContent = latitude;
 
         sectionLong.textContent = longitude;
