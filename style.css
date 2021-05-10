@@ -22,10 +22,11 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 93vh 80vh;
+    grid-template-rows: 10vh 93vh 80vh 10vh;
     grid-template-areas: "header header"
                          "main main"
                          "iss-section about-iss"
+                         "footer footer"
     ;
 }
 
@@ -33,7 +34,6 @@ header {
     grid-area: header;
     background-color: blue;
 }
-
 
 /* map settings */
 .container-map {
@@ -56,6 +56,10 @@ nav.about-iss {
     grid-area: about-iss;
 }
 
+footer {
+    border: 1px solid red;
+    grid-area: footer;
+}
 
 /* Button ligth/dark mode */
 .container-dark-mode {

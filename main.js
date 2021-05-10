@@ -1,6 +1,8 @@
 // the elements in the html that will recive latitude and logitude iss real time information
-const sectionLat = document.querySelector(".latitude span");
-const sectionLong = document.querySelector(".longitude span");
+const realTimeLat = document.querySelector(".latitude span");
+const realTimeLog = document.querySelector(".longitude span");
+const realTimeVel = document.querySelector(".velocity span");
+const realTimeStamp = document.querySelector(".time-stamp span")
 
 // generated map from leaflet library
 const mymap = L.map('mapid', {
@@ -18,7 +20,7 @@ let myIcon = L.icon({
 const marker = L.marker([0, 0], {icon: myIcon}).addTo(mymap);
 
 // setting an circle around the satellite icon
-let circleAround = L.circle([0, 0], {radius: 1900001, color: 'red'}).addTo(mymap)
+let circleAround = L.circle([0, 0], {radius: 1900001, color: 'white'}).addTo(mymap)
 
 // setting the map tiles from Open Streetmap
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
@@ -40,7 +42,7 @@ setInterval(
 
         const data = await response.json(); 
         
-        const {latitude, longitude} = data;
+        const {latitude, longitude, velocity, timestamp} = data;
 
         // passing the coodernates to my map
         mymap.setView([latitude, longitude]);
@@ -51,10 +53,16 @@ setInterval(
         // padding the coordenates of my station to my circle around 
         circleAround.setLatLng([(latitude - 5), (longitude + 5)]);
         
+        // converting the iss timestamp to human readable data
+        let miliseconds = timestamp * 1000;
+        const date = new Date(miliseconds);
+        const humanFormat = date.toLocaleString();
 
-        sectionLat.textContent = latitude;
-
-        sectionLong.textContent = longitude;
+        // applying the real time iss information in the html tags
+        realTimeLat.textContent = latitude;
+        realTimeLog.textContent = longitude;
+        realTimeVel.textContent = velocity;
+        realTimeStamp.textContent = humanFormat;
 
     }, 1000);
 
