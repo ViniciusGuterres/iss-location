@@ -7,7 +7,8 @@ const realTimeStamp = document.querySelector(".time-stamp span")
 // generated map from leaflet library
 const mymap = L.map('mapid', {
     center: [0, 0],
-    zoom: 3
+    zoom: 3,
+    
 });
 
 // setting the satellite icon that goes mark the iss position on the map
@@ -28,6 +29,7 @@ const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
 
 const tiles = L.tileLayer(tileUrl, {attribution} );
+
 
 tiles.addTo(mymap);
 
