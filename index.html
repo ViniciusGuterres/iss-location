@@ -16,33 +16,44 @@
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
 
-    
-
 </head>
 <body>
     
-    <header>
-        <h1>Coordenadas ISS</h1>
-    </header>
+    <div class="container">
 
-    <section class="latitude">
-        <h4>Latitude:</h4>
-        <span></span>
-    </section>
+        <header>
+            <h1>Coordenadas ISS</h1>
+        </header>
 
-    <section class="longitude">
-        <h4>Longitude:</h4>
-        <span></span>
-    </section>
+        <!-- Map gereted with Leaflet library -->
+        <div class="container-map">
+            <div id="mapid"></div>
+        </div>
 
+        <section class="iss-realtime-info">
 
-    <!-- Map gereted with Leaflet library -->
-    <div class="container-map">
-        <div id="mapid"></div>
+            <div class="latitude">
+                <h4>Latitude:</h4>
+                <span></span>
+            </div>
+
+            <div class="longitude">
+                <h4>Longitude:</h4>
+                <span></span>
+            </div>
+
+        </section>
+
+        <nav class="about-iss">
+            <h4>What is the iss</h4>
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, eius, deleniti officiis a esse et culpa natus deserunt, ipsam ipsum vero autem blanditiis commodi voluptate. Officia nemo omnis aliquid ea!</span>
+        </nav>
+
     </div>
 
+
     <!-- Light/black theme button -->
-    <div class="container">
+    <div class="container-dark-mode">
         <h1>Light / Dark</h1>
         <div class="toggle">
             <input id="switch" type="checkbox" name="theme">

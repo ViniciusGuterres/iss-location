@@ -8,10 +8,6 @@ html {
     height: 100%;
     font-family: 'Montserrat';
 
-    display: grid;
-    align-items: center;
-    justify-items: center;
-
     --bg: #FCFCFC;
     --bg-panel: #EBEBEB;
     --color-headings: #0077FF;
@@ -22,20 +18,47 @@ body {
     background-color: var(--bg);
 }
 
+/* container all settings */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 93vh 80vh;
+    grid-template-areas: "header header"
+                         "main main"
+                         "iss-section about-iss"
+    ;
+}
+
+header {
+    grid-area: header;
+    background-color: blue;
+}
+
 
 /* map settings */
 .container-map {
     margin: 0 auto;
     width: 80%;
+    grid-area: main;
 }
 
 #mapid {
     height: 600px;
 }
 
+section.iss-realtime-info {
+    border: 1px solid black;
+    grid-area: iss-section;
+}
+
+nav.about-iss {
+    border: 1px solid black;
+    grid-area: about-iss;
+}
+
 
 /* Button ligth/dark mode */
-.container {
+.container-dark-mode {
     background-color: var(--bg-panel);
 
     margin: 5em;
