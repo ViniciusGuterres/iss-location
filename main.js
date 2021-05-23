@@ -1,8 +1,9 @@
 // the elements in the html that will recive latitude and logitude iss real time information
-const realTimeLat = document.querySelector(".latitude span");
-const realTimeLog = document.querySelector(".longitude span");
-const realTimeVel = document.querySelector(".velocity span");
-const realTimeStamp = document.querySelector(".time-stamp span")
+const realTimeLat = document.querySelector("#lat");
+const realTimeLog = document.querySelector("#long");
+const realTimeVel = document.querySelector("#velocity");
+const realTimeStamp = document.querySelector("#time")
+const realTimeAlt = document.querySelector("#altitude");
 
 // generated map from leaflet library
 const mymap = L.map('mapid', {
@@ -44,7 +45,7 @@ setInterval(
 
         const data = await response.json(); 
         
-        const {latitude, longitude, velocity, timestamp} = data;
+        const {latitude, longitude, velocity, timestamp, altitude} = data;
 
         // passing the coodernates to my map
         mymap.setView([latitude, longitude]);
@@ -65,6 +66,7 @@ setInterval(
         realTimeLog.textContent = longitude;
         realTimeVel.textContent = `${velocity} Km`;
         realTimeStamp.textContent = humanFormat;
+        realTimeAlt.textContent = `${altitude.toFixed(4)} metros`
 
     }, 1000);
 

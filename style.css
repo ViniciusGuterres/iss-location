@@ -7,10 +7,6 @@
 html {
     /* height: 100%; */
     font-family: 'Montserrat';
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     --bg: #FCFCFC;
     --bg-panel: #EBEBEB;
     --color-headings: #aad3de;
@@ -21,19 +17,6 @@ body {
     background-color: var(--bg);
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10vh 70vh 10vh;
-    grid-template-areas: "header header"
-                         "main main"
-                         "nav aside"
-                         "footer footer"
-    ;   
-
-}
-
-<<<<<<< Updated upstream
 /* header container */
 .topnav {
     overflow: hidden;
@@ -100,7 +83,7 @@ body {
 .container {
     display: flex;
     flex-flow: row wrap;
-    background: red;
+    /* background: red; */
     max-width: 95%;
     margin: auto;
 }
@@ -115,158 +98,34 @@ section {
 
 /* map settings */
 .container-map {
-    width: 100vw;
+    width: 70vw;
+    margin: 30px auto;
 }
 
 #mapid {
-    height: 80vh;
+    height: 60vh;
 }
 
-/* information section */
-section.iss-realtime-info {
-
+/* information table */
+table, th, td {
+    border-top: 1px solid #0000001c;
+    border-collapse: collapse;
 }
 
-section.iss-realtime-info > div {
-
+th, td {
+    padding: 5px 50px;
 }
 
-section.iss-realtime-info > div > h4 {
-    font-size: 30px;
+table {
+    border-spacing: 5px;
+    margin: 30px auto;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 
-
-
-
-
-/* about iss */
-nav.about-iss {
-    border-bottom: 2px solid #1C6EA4;
-    border-radius: 0px 40px 0px 40px;
-    grid-area: about-iss;
-    background-color: blueviolet;
-}
-
-footer {
-    border: 1px solid red;
-    grid-area: footer;
-}
-
-/* Button ligth/dark mode */
-.container-dark-mode {
-=======
-/* header */
-header {
-    background-color: red;
-    grid-area: header;
-}
-
-/* header h1 {
-    font-size: 55px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-header h2 {
-    background-color: #ccc;
-    height: 2px;
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-bottom: 40px;
-} */
-
-
-
-main #mapid{
-    grid-area: main;
-    height: 30px;
-}
-
-nav {
-    height: 30px;
-    background-color: violet;
-}
-
-aside {
-    height: 30px;
-    background-color: yellowgreen;
-}
-
-/* Button ligth/dark mode */
-/* .container {
->>>>>>> Stashed changes
-    background-color: var(--bg-panel);
-
-    margin: 5em;
-    padding: 5em;
-
-    border-radius: 15px;
-
-    display: grid;
-    grid-template-columns: 80% auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        "title switch"
-        "content content"
-    ;
-}
-
-h1 {
-    margin: 0;
-    color: var(--color-text);
-}
-
-p {
-    color: var(--color-text);
-    grid-area: content;
-    font-size: 1.1em;
-    line-height: 1.8em;
-    margin-top: 2em;
-}
-
-input[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
-
-label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: grey;
-    float: right;
-    border-radius: 100px;
-    position: relative;
-}
-
-label::after{
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 90px;
-    transition: 0.3s;
-}
-
-input:checked + label {
-    background-color: var(--color-headings);
-}
-
-input:checked + label::after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
-}
-
-label:active:after {
-    width: 45px;
-<<<<<<< Updated upstream
-}
 
 
 
@@ -282,6 +141,5 @@ label:active:after {
     }
     
 }
-=======
-} */
->>>>>>> Stashed changes
+ 
+
