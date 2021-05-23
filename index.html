@@ -19,13 +19,38 @@
 </head>
 <body>
     
+    <header class="topnav">
+        <h1>Iss location</h1>
+
+        <div class="nav-right">
+            <a href="">Home</a>
+            <a href="">O que é o ISS</a>
+            <a href="">Sobre nós</a>
+        </div>
+        
+        <!-- mobile navigation -->
+        <div class="burgue-nav">
+            <div class="itens-burgue"></div>
+            <div class="itens-burgue"></div>
+            <div class="itens-burgue"></div>
+        </div>
+
+    </header>
+
+    <div class="mobile-nav">
+        <a href="">Home</a>
+        <a href="">O que é o ISS</a>
+        <a href="">Sobre nós</a>
+    </div>
+
+    <!-- Map nav container -->
     <div class="container">
 
-        <header>
-            <h1>Coordenadas ISS</h1>
-        </header>
+        <section class="title">
+            <h1>Localização do ISS em tempo real</h1>
+        </section>
 
-        <!-- Map gereted with Leaflet library -->
+    
         <div class="container-map">
             <div id="mapid"></div>
         </div>
@@ -54,18 +79,12 @@
 
         </section>
 
-        <nav class="about-iss">
-            <h4>What is the iss</h4>
-            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, eius, deleniti officiis a esse et culpa natus deserunt, ipsam ipsum vero autem blanditiis commodi voluptate. Officia nemo omnis aliquid ea!</span>
-        </nav>
+    </div> 
 
-        <footer>Footer</footer>
-
-    </div>
-
+   
 
     <!-- Light/black theme button -->
-    <div class="container-dark-mode">
+    <!-- <div class="container-dark-mode">
         <h1>Light / Dark</h1>
         <div class="toggle">
             <input id="switch" type="checkbox" name="theme">
@@ -73,12 +92,13 @@
         </div>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam atque pariatur officia quasi sed fugiat vitae explicabo, nesciunt quo blanditiis reprehenderit ducimus cupiditate quia, architecto, id minima inventore placeat?</p>
-    </div>
+    </div> -->
 
 
     <script src="main.js"></script>
     <script src="darkMode.js"></script>
+    <script src="mobileNav.js"></script>
 
-    </script>
+
 </body>
 </html>

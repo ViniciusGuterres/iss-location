@@ -5,9 +5,8 @@
 }
 
 html {
-    height: 100%;
+    /* height: 100%; */
     font-family: 'Montserrat';
-
     --bg: #FCFCFC;
     --bg-panel: #EBEBEB;
     --color-headings: #aad3de;
@@ -18,31 +17,89 @@ body {
     background-color: var(--bg);
 }
 
-/* container all settings */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 6vh 80vh 10vh 10vh;
-    grid-template-areas: "header header"
-                         "main main"
-                         "iss-section iss-section"
-                         "about-iss about-iss"
-                         "footer footer"
-    ;
+
+/* header container */
+.topnav {
+    overflow: hidden;
+    background-color: tomato;
+    height: 47px;
 }
 
-header {
-    grid-area: header;
-    background-color: #f2efe9;
-    border-bottom: 1px solid #3333331c;
-    
+.nav-right > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 12px;
+}
+
+.nav-right > a:hover {
+    background: royalblue;
+}
+
+.nav-right {
+    float: right;
+    padding: 12px;
+}
+
+.topnav > h1 {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* Mobile navigation */
+.burgue-nav {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.itens-burgue {
+    background: white;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 5px;
+}
+
+.mobile-nav {
+    text-align: center;
+    display: none;
+}
+
+.mobile-nav > a {
+    text-decoration: none;
+    animation-delay: 3.5s;
+    width: 100%;
+    display: block;
+    background: red;
+    border-bottom: 1px solid #00000030;
+    padding: 12px ;
+    color: white;
+}
+
+
+/* container main map */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    background: red;
+    max-width: 95%;
+    margin: auto;
+}
+
+/* Title section */
+section {
+    border-bottom: 1px solid burlywood;
+    width: 100vw;
+    padding: 10px 10px;
+
 }
 
 /* map settings */
 .container-map {
-    margin: 0 auto;
-    width: 100%;
-    grid-area: main;
+    width: 100vw;
 }
 
 #mapid {
@@ -51,25 +108,21 @@ header {
 
 /* information section */
 section.iss-realtime-info {
-    background-color: var(--color-headings);
-    grid-area: iss-section;
-    font-size: 20px;
-    display: flex;
-    color: var(--color-text);
-    border-top: 1px solid #33333380;
+
 }
 
 section.iss-realtime-info > div {
-    display: inline-block;
-    padding: 20px 20xp;
-    width: 25%;
-    text-align: center;
-    margin-top: 7px;
+
 }
 
 section.iss-realtime-info > div > h4 {
     font-size: 30px;
 }
+
+
+
+
+
 
 /* about iss */
 nav.about-iss {
@@ -155,4 +208,19 @@ input:checked + label::after {
 
 label:active:after {
     width: 45px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-right {
+        display: none;
+    }
+
+    .burgue-nav {
+        display: block;
+    }
+    
 }
