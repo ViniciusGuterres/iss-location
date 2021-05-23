@@ -7,6 +7,10 @@
 html {
     /* height: 100%; */
     font-family: 'Montserrat';
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     --bg: #FCFCFC;
     --bg-panel: #EBEBEB;
     --color-headings: #aad3de;
@@ -17,7 +21,19 @@ body {
     background-color: var(--bg);
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 70vh 10vh;
+    grid-template-areas: "header header"
+                         "main main"
+                         "nav aside"
+                         "footer footer"
+    ;   
 
+}
+
+<<<<<<< Updated upstream
 /* header container */
 .topnav {
     overflow: hidden;
@@ -139,6 +155,47 @@ footer {
 
 /* Button ligth/dark mode */
 .container-dark-mode {
+=======
+/* header */
+header {
+    background-color: red;
+    grid-area: header;
+}
+
+/* header h1 {
+    font-size: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    background-color: #ccc;
+    height: 2px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 40px;
+} */
+
+
+
+main #mapid{
+    grid-area: main;
+    height: 30px;
+}
+
+nav {
+    height: 30px;
+    background-color: violet;
+}
+
+aside {
+    height: 30px;
+    background-color: yellowgreen;
+}
+
+/* Button ligth/dark mode */
+/* .container {
+>>>>>>> Stashed changes
     background-color: var(--bg-panel);
 
     margin: 5em;
@@ -208,6 +265,7 @@ input:checked + label::after {
 
 label:active:after {
     width: 45px;
+<<<<<<< Updated upstream
 }
 
 
@@ -224,3 +282,6 @@ label:active:after {
     }
     
 }
+=======
+} */
+>>>>>>> Stashed changes
