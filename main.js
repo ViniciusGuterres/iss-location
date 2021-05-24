@@ -64,7 +64,7 @@ setInterval(
         // applying the real time iss information in the html tags
         realTimeLat.textContent = latitude;
         realTimeLog.textContent = longitude;
-        realTimeVel.textContent = `${velocity} Km`;
+        realTimeVel.textContent = `${velocity.toFixed(6)} Km`;
         realTimeStamp.textContent = humanFormat;
         realTimeAlt.textContent = `${altitude.toFixed(4)} metros`
 
