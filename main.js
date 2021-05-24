@@ -4,11 +4,15 @@ const realTimeLog = document.querySelector("#long");
 const realTimeVel = document.querySelector("#velocity");
 const realTimeStamp = document.querySelector("#time")
 const realTimeAlt = document.querySelector("#altitude");
+const realtTimeVisi = document.querySelector("#visibility");
+const visibiltyData = document.querySelector("#dataVisibility");
 
 // generated map from leaflet library
 const mymap = L.map('mapid', {
     center: [0, 0],
     zoom: 3,
+    scrollWheelZoom: false,
+    touchZoom: true
     
 });
 
@@ -45,7 +49,7 @@ setInterval(
 
         const data = await response.json(); 
         
-        const {latitude, longitude, velocity, timestamp, altitude} = data;
+        const {latitude, longitude, velocity, timestamp, altitude, visibility} = data;
 
         // passing the coodernates to my map
         mymap.setView([latitude, longitude]);
@@ -66,7 +70,17 @@ setInterval(
         realTimeLog.textContent = longitude;
         realTimeVel.textContent = `${velocity.toFixed(6)} Km`;
         realTimeStamp.textContent = humanFormat;
-        realTimeAlt.textContent = `${altitude.toFixed(4)} metros`
+        realTimeAlt.textContent = `${altitude.toFixed(4)} metros`;
+        realtTimeVisi.textContent = visibility;
+        
+        // change the table row visibility color according to the real visibility
+        if (visibility == 'daylight') {
+            visibiltyData.style.background = 'yellow';
+        }
+        else {
+            visibiltyData.style.background = 'black';
+            visibiltyData.style.color = 'white';
+        }
 
     }, 1000);
 
