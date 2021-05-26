@@ -18,7 +18,7 @@ const mymap = L.map('mapid', {
 
 // setting the satellite icon that goes mark the iss position on the map
 let myIcon = L.icon({   
-    iconUrl: 'iss.png',
+    iconUrl: 'img/iss.png',
     iconSize: [120, 90],
     iconAnchor: [25, 16],
 });
