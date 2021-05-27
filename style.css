@@ -149,6 +149,7 @@ tr:nth-child(even) {
     margin: auto;
     height: 500px;
     position: relative;
+    background-color: red;
 }
 
 .slide-container > img {

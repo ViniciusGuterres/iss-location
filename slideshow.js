@@ -1,6 +1,3 @@
-// armazenar as classes que estão as imagens
-// let images = document.getElementsByClassName("mySlides");
-
 // por padrao, a primeira imagem vai ser display block
 const slide = {
     position: 0,
@@ -14,7 +11,8 @@ const slide = {
             this.position = 0;
         }
         this.showImage();
-        console.log(this.images)
+        console.log(slide.position)
+
     },
 
     praTras() {
@@ -24,7 +22,8 @@ const slide = {
             this.position = this.maxPosition;
         }
         this.showImage()
-        console.log(this.position)
+        console.log(slide.position)
+
     },
 
     showImage() {
@@ -41,7 +40,7 @@ const slide = {
 
 // percorrer todas as imagens e dar display none em todas, menos ao do indice atual
 
-
 slide.showImage();
 
-console.log(slide.position)
+console.log(typeof slide.images)
+
